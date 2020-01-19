@@ -685,7 +685,6 @@ body {
 
 @media (min-width: 482px) {
 	.header_product {
-		right: 240px;
 		width: 300px;
 		display: block;	
 	}	
@@ -1476,24 +1475,26 @@ input[type=text], select {
 }
 
 .section__order .order_product {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	height: 100%;
-	width: auto;
-	opacity: 0.3;
-	max-width: inherit;
+	
+	width: 100%;
+	max-width: 300px;
 }
+
 
 @media (min-width: 576px) {
 	.section__order .order_product {
+		position: absolute;
 		opacity: 1;
 		right: auto;
 		left: -50px;
 		display: block;
+		height: auto;
 	}
 }
 
@@ -1508,20 +1509,28 @@ input[type=text], select {
 @media (min-width: 768px) {
 	.section__order .order_product {
 		left: -60px;
-		height: 80%;
+		max-width: 320px;
 	}
 }
 
 @media (min-width: 992px) {
 	.section__order .order_product {
 		left: -60px;
-		height: 100%;
+		max-width: 360px;
 	}
 }
 
 @media (min-width: 1200px) {
 	.section__order .order_product {
 		left: 0;
+		max-width: 380px;
+	}
+}
+
+@media (min-width: 1420px) {
+	.section__order .order_product {
+		left: 0;
+		max-width: 400px;
 	}
 }
 
@@ -1706,11 +1715,10 @@ input[type=text], select {
 
 @media (max-width: 575.98px) {
 	.form__bg {
-	    height: auto !important;
-	    width: auto !important;
-	    padding: 10% !important;
-	    max-width: 340px !important;
-	    bottom: 40px !important;
+		position: relative;
+		margin: auto;
+	    width: 100%;
+	    max-width: 300px;
 	}
 
 	.section__order .form__bg {
